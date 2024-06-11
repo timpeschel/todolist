@@ -59,3 +59,64 @@ h1{
 #todo-input:focus{
     outline:none;   /*  to suppress browser highlighting the field selected    */
 }
+
+form{
+    position:relative;      /*  sets the reference point for all children to form's current position   */
+}
+#add-button{
+    position:absolute;
+    top:0;
+    right:0;
+
+    padding:1.2rem 2rem;
+    font:inherit;
+    background-color:var(--accent-color);
+    border-radius:3rem;
+    border:2px solid var(--accent-color);
+    cursor:pointer;
+}
+
+/* #### Tasks list */
+
+#todo-list{
+    list-style-type:none;
+}
+
+li.todo{
+    padding:0 0.5rem;
+    margin-bottom:0.6rem;
+    display:flex;
+    align-items:center;
+
+    background-color:var(--primary-color);
+    border-radius:4rem;
+    justify-content:space-between;
+}
+
+.todo-text{
+    padding:0.6rem;
+    padding-right:0;
+    width:100%;
+    font-weight:300;
+}
+
+/* buttons in task list */
+
+.custom-checkbox{
+    margin-top:0.2rem;          /* helps to vertically align the tick marks  */
+}
+
+.delete-button{
+    padding:0.2rem;
+    background:none;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+}
+.delete-button svg{
+    transition:200ms ease;
+}
+.delete-button:hover svg{
+    fill:var(--accent-color);
+}
